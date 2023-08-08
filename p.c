@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <conio.h> // For getch() function (Windows specific)
+#include <conio.h> 
 
 struct User {
     char phone[50];

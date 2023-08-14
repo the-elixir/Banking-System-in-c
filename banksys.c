@@ -12,9 +12,9 @@ struct User {
 int main() {
     struct User users[10];
     int userCount = 0;
-    int loggedInUser = -1; // Index of the logged-in user
+    int loggedInUser = -1; //logged-in user
     int i, choice;
-    char ch; // To store characters temporarily
+    char ch; 
 
     printf("Welcome to C Banking!\n");
 
@@ -33,7 +33,7 @@ int main() {
             scanf("%s", newUser.phone);
             printf("Create a password: ");
 
-            // Input password without displaying characters
+            // taking password from the user and displaying in the form of *
             i = 0;
             while ((ch = getch()) != '\r' && i < sizeof(newUser.password) - 1) {
                 if (ch == 8 && i > 0) { // Handle backspace
@@ -73,7 +73,7 @@ int main() {
             for (i = 0; i < userCount; i++) {
                 if (strcmp(phone, users[i].phone) == 0 && strcmp(password, users[i].password) == 0) {
                     printf("Welcome, %s!\n", users[i].phone);
-                    loggedInUser = i; // Set the index of the logged-in user
+                    loggedInUser = i; // Highlighting spot for logged-in member.
                     break;
                 }
             }
@@ -155,6 +155,6 @@ int main() {
 
     } while (choice != 3); // Exit main loop when user chooses to exit
 
-    return 0; // Return 0 to indicate successful program execution
+    return 0; 
 }
 
